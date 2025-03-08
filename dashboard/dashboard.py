@@ -69,13 +69,13 @@ def create_monthly_df(df):
     return monthly_df
 
 # Menyiapkan cleaned data
-dayhour_clean_df = pd.read_csv("dashboard/day_clean.csv")
+day_clean_df = pd.read_csv("dashboard/day_clean.csv")
 hour_clean_df = pd.read_csv("data/hour_clean.csv")
 
 # Filter data
-dayhour_clean_df["dateday"] = pd.to_datetime(dayhour_clean_df["dateday"])
+day_clean_df["dateday"] = pd.to_datetime(day_clean_df["dateday"])
 hour_df["dateday"] = pd.to_datetime(hour_clean_df["dateday"])
-min_date = dayhour_clean_df["dateday"].min()
+min_date = day_clean_df["dateday"].min()
 max_date = dayhour_clean_df["dateday"].max()
 
 with st.sidebar:
@@ -89,7 +89,7 @@ with st.sidebar:
         value=[min_date, max_date]
     )
 
-main_df = dayhour_clean_df[(dayhour_clean_df["dateday"] >= str(start_date)) & 
+main_df = day_clean_df[(day_clean_df["dateday"] >= str(start_date)) & 
                        (dayhour_clean_df["dateday"] <= str(end_date))]
 
 second_df = hour_clean_df[(hour_clean_df["dateday"] >= str(start_date)) & 
