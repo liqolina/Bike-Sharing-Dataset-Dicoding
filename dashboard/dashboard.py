@@ -76,7 +76,7 @@ hour_clean_df = pd.read_csv("data/hour_clean.csv")
 day_clean_df["dateday"] = pd.to_datetime(day_clean_df["dateday"])
 hour_df["dateday"] = pd.to_datetime(hour_clean_df["dateday"])
 min_date = day_clean_df["dateday"].min()
-max_date = dayhour_clean_df["dateday"].max()
+max_date = day_clean_df["dateday"].max()
 
 with st.sidebar:
     st.image("dashboard/bike_ride.png")
@@ -90,7 +90,7 @@ with st.sidebar:
     )
 
 main_df = day_clean_df[(day_clean_df["dateday"] >= str(start_date)) & 
-                       (dayhour_clean_df["dateday"] <= str(end_date))]
+                       (day_clean_df["dateday"] <= str(end_date))]
 
 second_df = hour_clean_df[(hour_clean_df["dateday"] >= str(start_date)) & 
                        (hour_clean_df["dateday"] <= str(end_date))]
