@@ -6,4 +6,7 @@ Repository ini merupakan proyek Analisis Data pada dataset Bike-Sharing.
 - `notebook.ipyn` : File yang berisikan analisis data yang dibutuhan
 - `Readme.md` : Berisikan informasi mengenai proyek Analisis Data
 - `requirements.txs` : Berisikan informasi mengenai library yang dibutuhkan pada proyek Analisa Data
+# Instalasi
+1. Clone 
+
 
