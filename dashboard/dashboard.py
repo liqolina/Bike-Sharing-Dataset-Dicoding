@@ -110,11 +110,11 @@ col1, col2, col3 = st.columns(3)
 
 with col1:
     casual_df = casual_df['casual'].sum()
-    st.metric('Casual User', value= count_df)
+    st.metric('Casual User', value= casual_df)
 
 with col2:
     registered_df = registered_df['registered'].sum()
-    st.metric('Registered User', value= count_df)
+    st.metric('Registered User', value= registered_df)
  
 with col3:
     count_df = count_df['count'].sum()
