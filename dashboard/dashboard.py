@@ -122,7 +122,7 @@ fig, ax = plt.subplots()
 
 # Membuat barplot
 sns.barplot(
-    data=season_df,
+    data=main_df,
     x="season", 
     y="count", 
     hue="year", 
