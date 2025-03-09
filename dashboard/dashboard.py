@@ -92,10 +92,10 @@ second_df = hour_clean_df[(hour_clean_df["dateday"] >= str(start_date)) &
 count_df = create_count_df(main_df)
 registered_df = create_registered_df(main_df)
 casual_df = create_casual_df(main_df)
-# temp_df = create_temp_df(main_df)
-# atemp_df = create_atemp_df(main_df)
-# season_df = create_season_df(main_df)
-# weather_df = create_weather_df(main_df)
+temp_df = create_temp_df(main_df)
+atemp_df = create_atemp_df(main_df)
+season_df = create_season_df(main_df)
+weather_df = create_weather_df(main_df)
 
 # Membuat dashboard Lengkap
 
