@@ -8,8 +8,10 @@ Repository ini merupakan proyek Analisis Data pada dataset Bike-Sharing.
 - `requirements.txs` : Berisikan informasi mengenai library yang dibutuhkan pada proyek Analisa Data
 # Instalasi
 Instal Python dan pustaka - pustaka yang dibutuhkan. Kemudian instal pustaka streamlit dengan menjalankan perintah sebagai berikut :
-    ```pip install streamlit
+    ``` **ip install streamlit** ```
 # Streamlit Cloud
 Dashboard dapat dilihat pada ing berikut : (https://bike-sharing-dataset-dicoding-qqjzmtaevagzzzsjuqnamg.streamlit.app/)
+# Berikut Tampilan Dashboard
+![alt text](https://github.com/liqolina/Bike-Sharing-Dataset-Dicoding/blob/main/dashboard/Dashboard-1.PNG?raw=true)
 
 
