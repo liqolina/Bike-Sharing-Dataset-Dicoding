@@ -8,9 +8,13 @@ Repository ini merupakan proyek Analisis Data pada dataset Bike-Sharing.
 - `requirements.txs` : Berisikan informasi mengenai library yang dibutuhkan pada proyek Analisa Data
 # Instalasi
 Instal Python dan pustaka - pustaka yang dibutuhkan. Kemudian instal pustaka streamlit dengan menjalankan perintah sebagai berikut :
-``pip install streamlit``
+```
+pip install streamlit
+```
 # Run steamlit app
-``streamlit run dashboard.py``
+```
+streamlit run dashboard.py
+```
 # Streamlit Cloud
 Dashboard dapat dilihat pada ing berikut : (https://bike-sharing-dataset-dicoding-qqjzmtaevagzzzsjuqnamg.streamlit.app/)
 # Berikut Tampilan Dashboard
