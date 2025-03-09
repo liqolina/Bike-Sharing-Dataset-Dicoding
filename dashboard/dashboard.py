@@ -15,12 +15,12 @@ def create_weather_df(df):
 
 # Mendefinisikan Suhu Lingkungan
 def create_temp_df(df):
-    temp_df =  df.groupby(by='temp')[['registered', 'casual']].sum().reset_index() 
+    temp_df =  df.groupby(by='temp')[['count']].sum().reset_index() 
     return temp_df
 
 # Mendefinisikan Suhu yang dirasakan Tubuh
 def create_atemp_df(df):
-    atemp_df =  df.groupby(by='atemp')[['registered', 'casual']].sum().reset_index() 
+    atemp_df =  df.groupby(by='atemp')[['count']].sum().reset_index() 
     return atemp_df
 
 # Mendefinisikan Casual
@@ -32,7 +32,7 @@ def create_casual_df(df):
 
 # Mendefinisikan Season
 def create_season_df(df):
-    season_df = df.groupby(by='season')[['registered', 'casual']].sum().reset_index() 
+    season_df = df.groupby(by='season')[['count']].sum().reset_index() 
     return season_df
 
 # Mendefinisikan Registered
