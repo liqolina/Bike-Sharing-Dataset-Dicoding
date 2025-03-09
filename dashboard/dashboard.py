@@ -34,8 +34,6 @@ def create_casual_df(df):
     }).reset_index()
     return casual_df
 
-casual_df = create_casual_df(main_df)
-
 # Mendefinisikan Season
 def create_season_df(df):
     season_df = df.groupby(by=["season","yr"]).agg({
@@ -50,16 +48,12 @@ def create_registered_df(df):
     }).reset_index()
     return registered_df
 
-registered_df = create_registered_df(main_df)
-
 # Mendefinisikan Count
 def create_count_df(df):
     count_df = df.groupby(by='dateday').agg({
         'count': 'sum'
     }).reset_index()
     return count_df
-
-count_df = create_count_df(main_df)
 
 # Mendefinisikan Month and Year
 def create_monthly_df(df):
@@ -94,6 +88,14 @@ main_df = day_clean_df[(day_clean_df["dateday"] >= str(start_date)) &
 
 second_df = hour_clean_df[(hour_clean_df["dateday"] >= str(start_date)) & 
                        (hour_clean_df["dateday"] <= str(end_date))]
+
+count_df = create_count_df(main_df)
+registered_df = create_registered_df(main_df)
+casual_df = create_casual_df(main_df)
+temp_df = create_temp_df(main_df)
+atemp_df = create_atemp_df(main_df)
+season_df = create_season_df(main_df)
+weather_df = create_weather_df(main_df)
 
 # Membuat dashboard Lengkap
 
