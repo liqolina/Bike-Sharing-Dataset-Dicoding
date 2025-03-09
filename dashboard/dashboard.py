@@ -200,7 +200,7 @@ fig, ax = plt.subplots()
 
 # Membuat Regplot
 sns.regplot(
-    data=temp_df,
+    data=main_df,
     x=temp_df, 
     y=count_df
     )
@@ -221,7 +221,7 @@ fig, ax = plt.subplots()
 
 # Membuat Regplot
 sns.regplot(
-    data=atemp_df,
+    data=main_df,
     x=atemp_df, 
     y=count_df
     )
