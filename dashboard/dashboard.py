@@ -64,11 +64,11 @@ def create_monthly_df(df):
 
 # Menyiapkan cleaned data
 day_clean_df = pd.read_csv("dashboard/day_clean.csv")
-hour_clean_df = pd.read_csv("data/hour_clean.csv")
+hour_clean_df = pd.read_csv("dashboard/hour_clean.csv")
 
 # Filter data
 day_clean_df["dateday"] = pd.to_datetime(day_clean_df["dateday"])
-hour_df["dateday"] = pd.to_datetime(hour_clean_df["dateday"])
+hour_clean_df["dateday"] = pd.to_datetime(hour_clean_df["dateday"])
 min_date = day_clean_df["dateday"].min()
 max_date = day_clean_df["dateday"].max()
 
