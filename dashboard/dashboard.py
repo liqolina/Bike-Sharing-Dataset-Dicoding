@@ -94,7 +94,7 @@ weather_df = create_weather_df(main_df)
 # Membuat dashboard Lengkap
 
 # Dashboard (Header) Judul
-st.header('Bike Sharing Dashboard 🚲')
+st.header('Bike Sharing Dashboard 🚴‍♂️')
 
 # Dashboard (SubHeader)
 
