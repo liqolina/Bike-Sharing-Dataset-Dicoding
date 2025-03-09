@@ -201,7 +201,7 @@ fig, ax = plt.subplots()
 # Membuat Regplot
 sns.regplot(
     x=temp_df["temp"],
-    y=count_df["count"]
+    y=main_df["count"]
     )
 
 # Membuat label Regplot
@@ -222,7 +222,7 @@ fig, ax = plt.subplots()
 sns.regplot(
     data=main_df,
     x=atemp_df["atemp"],
-    y=count_df["count"]
+    y=main_df["count"]
     )
 
 # Membuat label Regplot
