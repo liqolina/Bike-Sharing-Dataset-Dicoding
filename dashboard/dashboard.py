@@ -67,7 +67,7 @@ min_date = day_clean_df["dateday"].min()
 max_date = day_clean_df["dateday"].max()
 
 with st.sidebar:
-    st.image("dashboard/bike_ride.png")
+    st.image("dashboard/bike_ride.jpg")
     
     # Mengambil start_date & end_date dari date_input
     start_date, end_date = st.date_input(
