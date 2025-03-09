@@ -12,6 +12,7 @@ Instal Python dan pustaka - pustaka yang dibutuhkan. Kemudian instal pustaka str
 pip install streamlit
 ```
 # Run steamlit app
+Untuk menjalankan app streamlit secara local
 ```
 streamlit run dashboard.py
 ```
