@@ -176,7 +176,7 @@ fig, ax = plt.subplots()
 
 # Buat lineplot
 sns.lineplot(
-    data=main_df,
+    data=main_df.sort_values(by="month", ascending= True),
     x="month",
     y="count",
     hue="year",
