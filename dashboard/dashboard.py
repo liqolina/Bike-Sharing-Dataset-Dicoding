@@ -174,9 +174,14 @@ st.subheader("Jumlah total sepeda yang disewakan berdasarkan Bulan dan tahun")
 # Membuat subplot
 fig, ax = plt.subplots()
 
+# Membuat urutan bulan
+main_df["month"] = pd.Categorical(main_df["month"], 
+                                           categories=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'], 
+                                           ordered=True)
+
 # Buat lineplot
 sns.lineplot(
-    data=main_df.sort_values(by="month", ascending= True),
+    data=main_df,
     x="month",
     y="count",
     hue="year",
