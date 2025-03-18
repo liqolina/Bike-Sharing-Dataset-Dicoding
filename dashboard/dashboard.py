@@ -188,7 +188,7 @@ sns.lineplot(
     x="month",
     y="count",
     hue="year",
-    palette="rocket",
+    palette="viridis",
     marker="o")
 
 # Mengatur judul, label y, dan label x
