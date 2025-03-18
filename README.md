@@ -14,7 +14,7 @@ pip install streamlit
 # Run steamlit app
 Untuk menjalankan app streamlit secara local
 ```
-streamlit run dashboard.py
+streamlit run dashboard/dashboard.py
 ```
 # Streamlit Cloud
 Dashboard dapat dilihat pada ing berikut : (https://bike-sharing-dataset-dicoding-qqjzmtaevagzzzsjuqnamg.streamlit.app/)
