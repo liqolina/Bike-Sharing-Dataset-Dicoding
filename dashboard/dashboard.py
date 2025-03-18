@@ -289,7 +289,7 @@ st.table(grouped_df)
 st.subheader("Clustering waktu penyewaan sepeda dengan jumlah penyewaan sepeda")
 
 # Membuat subplot
-fig, ax = plt.subplots()
+figu, ax = plt.subplots()
 
 # Menbuat regression plot untuk menampilkan hubungan season dan jumlah penyewaan sepeda
 plt.figure()
@@ -307,4 +307,4 @@ plt.xlabel('Waktu')
 plt.ylabel('Jumlah Penyewaan Sepeda')
 plt.tight_layout()
 
-st.pyplot(fig)
+st.pyplot(figu)
