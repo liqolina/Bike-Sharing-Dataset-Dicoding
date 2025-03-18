@@ -296,7 +296,7 @@ plt.figure(figsize=(8, 6))
 sns.regplot(
     x='hr', 
     y='count', 
-    data=grouped_df, 
+    data=second_df, 
     scatter_kws={'s': 10}, 
     line_kws={'color': 'red'}
 )
@@ -305,5 +305,6 @@ sns.regplot(
 plt.title('Jumlah Penyewaan Sepeda dengan Waktu')
 plt.xlabel('Waktu')
 plt.ylabel('Jumlah Penyewaan Sepeda')
+plt.tight_layout()
 
 st.pyplot(fig)
