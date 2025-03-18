@@ -296,7 +296,7 @@ plt.figure(figsize=(8, 6))
 sns.regplot(
     x='hr', 
     y='count', 
-    data=second_df, 
+    data=grouped_df, 
     scatter_kws={'s': 10}, 
     line_kws={'color': 'red'}
 )
