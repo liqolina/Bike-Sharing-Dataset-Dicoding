@@ -289,26 +289,3 @@ st.subheader("Clustering berdasarkan waktu penggunaan, frekuensi penyewaan seped
 grouped_df.rename(columns={'hr': 'Hour', 'count': 'Count', 'temp': 'Temperature*41', 'hum': 'Humidity*100', 'windspeed': 'Windspeed*67'}, inplace=True)
 
 st.table(grouped_df)
-
-st.subheader("Clustering waktu penyewaan sepeda dengan jumlah penyewaan sepeda")
-
-# Membuat subplot
-fig, ax = plt.subplots()
-
-# Menbuat regression plot untuk menampilkan hubungan season dan jumlah penyewaan sepeda
-plt.figure()
-sns.regplot(
-    x='hr', 
-    y='count', 
-    data=second_df, 
-    scatter_kws={'s': 10}, 
-    line_kws={'color': 'red'}
-)
-
-# Membuat plot
-plt.title('Jumlah Penyewaan Sepeda dengan Waktu')
-plt.xlabel('Waktu')
-plt.ylabel('Jumlah Penyewaan Sepeda')
-plt.tight_layout()
-
-st.pyplot(fig)
