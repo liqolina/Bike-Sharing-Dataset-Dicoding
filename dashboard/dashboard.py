@@ -58,6 +58,16 @@ def create_monthly_df(df):
     }).reset_index() 
     return monthly_df
 
+# Mendefinisikan Hour
+def create_hour_df(df):
+    grouped_df = df.groupby('hr').agg({
+        'count': 'mean',      # Jumlah rata rata penyewaan sepeda
+        'temp': 'mean',       # Temperatur lingkungan rata - rata per season
+        'hum': 'mean',        # Kelembapan rata - rata per season
+        'windspeed': 'mean'   # Kecepatan angin rata -rata
+    }).reset_index()
+    return grouped_df
+
 # Menyiapkan cleaned data
 day_clean_df = pd.read_csv("dashboard/day_clean.csv")
 hour_clean_df = pd.read_csv("dashboard/hour_clean.csv")
@@ -267,5 +277,25 @@ plt.title("Analisis Regresi berdasarkan Suhu  yang dirasakan Tubuh")
 plt.xlabel("Temperatur (Celcius)")
 plt.ylabel("Jumlah Penyewaan Sepeda")
 plt.tight_layout()
+
+st.pyplot(fig)
+
+# Membuat dashboard Clustering (Manual Grouping)
+st.subheader("Clustering berdasarkan waktu penggunaan, frekuensi penyewaan sepeda, suhu, kelembapan lingkungan, dan kecepatan angin")
+st.table(grouped_df)
+
+st.subheader("Clustering waktu penyewaan sepeda dengan jumlah penyewaan sepeda")
+
+# Membuat subplot
+fig, ax = plt.subplots()
+
+# Menbuat regression plot untuk menampilkan hubungan season dan jumlah penyewaan sepeda
+plt.figure(figsize=(8, 6))
+sns.regplot(x='hr', y='count', data=bike_hour_df, scatter_kws={'s': 10}, line_kws={'color': 'red'})
+
+# Membuat plot
+plt.title('Regression pada Penyewaan Sepeda vs. Waktu')
+plt.xlabel('Waktu')
+plt.ylabel('Jumlah Penyewaan Sepeda')
 
 st.pyplot(fig)
