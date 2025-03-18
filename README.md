@@ -6,7 +6,7 @@ Repository ini merupakan proyek Analisis Data pada dataset Bike-Sharing.
 - `notebook.ipyn` : File yang berisikan analisis data yang dibutuhan
 - `Readme.md` : Berisikan informasi mengenai proyek Analisis Data
 - `requirements.txs` : Berisikan informasi mengenai library yang dibutuhkan pada proyek Analisa Data
-# Instalasi
+# Setup Environment - Streamlit
 Instal Python dan pustaka - pustaka yang dibutuhkan. Kemudian instal pustaka streamlit dengan menjalankan perintah sebagai berikut :
 ```
 pip install streamlit
