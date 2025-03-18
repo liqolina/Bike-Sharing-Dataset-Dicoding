@@ -92,6 +92,7 @@ temp_df = create_temp_df(main_df)
 atemp_df = create_atemp_df(main_df)
 season_df = create_season_df(main_df)
 weather_df = create_weather_df(main_df)
+monthly_df = create_monthly_df(main_df)
 
 # Membuat dashboard Lengkap
 
