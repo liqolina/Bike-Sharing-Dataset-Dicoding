@@ -200,6 +200,32 @@ plt.tight_layout()
 
 st.pyplot(fig)
 
+# Membuat dashboard jumlah registered dengan casual
+st.subheader("Perbandingan Jumlah Registered dengan Casual")
+
+# Membuat subplot
+fig, ax = plt.subplots()
+
+# Data Untuk Casual
+total_casual = sum(main_df['casual'])
+
+# Data Untuk Registered
+total_registered = sum(main_df['registered'])
+
+# Data untuk Pieplot
+data = [total_casual, total_registered]
+labels = ['Casual', 'Registered']
+
+# Membuat label Pieplot
+plt.pie(
+    data,
+    labels=labels,
+    autopct='%1.1f%%',
+    colors=["gold", "tomato"]
+    )
+
+st.pyplot(fig)
+
 # Membuat dashboard Analisis Regresi berdasarkan Suhu Lingkungan
 st.subheader("Analisis Regresi berdasarkan Suhu Lingkungan")
 
