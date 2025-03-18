@@ -59,7 +59,7 @@ def create_monthly_df(df):
     return monthly_df
 
 # Mendefinisikan Hour
-def create_hour_df(df):
+def create_grouped_df(df):
     grouped_df = df.groupby('hr').agg({
         'count': 'mean',      # Jumlah rata rata penyewaan sepeda
         'temp': 'mean',       # Temperatur lingkungan rata - rata per season
