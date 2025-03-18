@@ -241,25 +241,7 @@ plt.title("Perbandingan Jumlah Registered dengan Casual")
 
 st.pyplot(fig)
 
-# Membuat dashboard Analisis Regresi berdasarkan Suhu Lingkungan
-st.subheader("Analisis Regresi berdasarkan Suhu Lingkungan")
 
-# Membuat subplot
-fig, ax = plt.subplots()
-
-# Membuat Regplot
-sns.regplot(
-    x=main_df["temp"],
-    y=main_df["count"]
-    )
-
-# Membuat label Regplot
-plt.title("Analisis Regresi berdasarkan Suhu Lingkungan")
-plt.xlabel("Temperatur (Celcius)")
-plt.ylabel("Jumlah Penyewaan Sepeda")
-plt.tight_layout()
-
-st.pyplot(fig)
 
 # Membuat dashboard Analisis Regresi berdasarkan Suhu yang dirasakan Tubuh
 st.subheader("Analisis Regresi berdasarkan Suhu  yang dirasakan Tubuh")
@@ -294,7 +276,7 @@ fig, ax = plt.subplots()
 # Menbuat regression plot untuk menampilkan hubungan season dan jumlah penyewaan sepeda
 plt.figure()
 sns.regplot(
-    x='temp', 
+    x='hr', 
     y='count', 
     data=second_df, 
     scatter_kws={'s': 10}, 
