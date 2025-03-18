@@ -200,7 +200,7 @@ plt.tight_layout()
 
 st.pyplot(fig)
 
-# Membuat dashboard jumlah registered dengan casual
+# Membuat dashboard Perbandingan Jumlah Registered dengan Casual
 st.subheader("Perbandingan Jumlah Registered dengan Casual")
 
 # Membuat subplot
@@ -223,6 +223,9 @@ plt.pie(
     autopct='%1.1f%%',
     colors=["gold", "tomato"]
     )
+
+# Membuat label Pieplot
+plt.title("Perbandingan Jumlah Registered dengan Casual")
 
 st.pyplot(fig)
 
