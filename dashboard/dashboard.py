@@ -32,7 +32,9 @@ def create_casual_df(df):
 
 # Mendefinisikan Season
 def create_season_df(df):
-    season_df = df.groupby(by='season')[['count']].sum().reset_index() 
+    season_df = df.groupby(by=["season","year"]).agg({
+    "count": "sum"
+    }).reset_index()
     return season_df
 
 # Mendefinisikan Registered
@@ -175,13 +177,13 @@ st.subheader("Jumlah total sepeda yang disewakan berdasarkan Bulan dan tahun")
 fig, ax = plt.subplots()
 
 # Membuat urutan bulan
-main_df["month"] = pd.Categorical(main_df["month"], 
+monthly_df["month"] = pd.Categorical(monthly_df["month"], 
                                            categories=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'], 
                                            ordered=True)
 
 # Buat lineplot
 sns.lineplot(
-    data=main_df,
+    data=monthly_df,
     x="month",
     y="count",
     hue="year",
