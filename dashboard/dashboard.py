@@ -1,3 +1,4 @@
+
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
@@ -292,10 +293,16 @@ fig, ax = plt.subplots()
 
 # Menbuat regression plot untuk menampilkan hubungan season dan jumlah penyewaan sepeda
 plt.figure(figsize=(8, 6))
-sns.regplot(x='hr', y='count', data=second_df, scatter_kws={'s': 10}, line_kws={'color': 'red'})
+sns.regplot(
+    x='hr', 
+    y='count', 
+    data=second_df, 
+    scatter_kws={'s': 10}, 
+    line_kws={'color': 'red'}
+)
 
 # Membuat plot
-plt.title('Regression pada Penyewaan Sepeda vs. Waktu')
+plt.title('Jumlah Penyewaan Sepeda dengan Waktu')
 plt.xlabel('Waktu')
 plt.ylabel('Jumlah Penyewaan Sepeda')
 
