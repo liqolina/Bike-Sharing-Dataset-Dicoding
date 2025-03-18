@@ -286,7 +286,7 @@ st.pyplot(fig)
 st.subheader("Clustering berdasarkan waktu penggunaan, frekuensi penyewaan sepeda, suhu, kelembapan lingkungan, dan kecepatan angin")
 
 # Renaming columns
-grouped_df.rename(columns={'hr': 'Hour', 'temp': 'Temperature*50', 'hum': 'Humidity', 'windspeed': 'Windspeed'}, inplace=True)
+grouped_df.rename(columns={'hr': 'Hour', 'count': 'Count', 'temp': 'Temperature*41', 'hum': 'Humidity*100', 'windspeed': 'Windspeed*67'}, inplace=True)
 
 st.table(grouped_df)
 
