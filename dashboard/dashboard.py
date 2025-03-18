@@ -204,7 +204,7 @@ st.pyplot(fig)
 st.subheader("Perbandingan Jumlah Registered dengan Casual")
 
 # Membuat subplot
-fig, ax = plt.subplots(figsize=(8, 8))
+fig, ax = plt.subplots(figsize=(7, 7))
 
 # Data Untuk Casual
 total_casual = sum(main_df['casual'])
