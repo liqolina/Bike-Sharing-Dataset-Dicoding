@@ -283,8 +283,8 @@ plt.tight_layout()
 st.pyplot(fig)
 
 # Membuat dashboard Clustering (Manual Grouping)
-#st.subheader("Clustering berdasarkan waktu penggunaan, frekuensi penyewaan sepeda, suhu, kelembapan lingkungan, dan kecepatan angin")
-#st.table(grouped_df)
+st.subheader("Clustering berdasarkan waktu penggunaan, frekuensi penyewaan sepeda, suhu, kelembapan lingkungan, dan kecepatan angin")
+st.table(grouped_df)
 
 st.subheader("Clustering waktu penyewaan sepeda dengan jumlah penyewaan sepeda")
 
@@ -294,7 +294,7 @@ fig, ax = plt.subplots()
 # Menbuat regression plot untuk menampilkan hubungan season dan jumlah penyewaan sepeda
 plt.figure()
 sns.regplot(
-    x='hr', 
+    x='temp', 
     y='count', 
     data=second_df, 
     scatter_kws={'s': 10}, 
