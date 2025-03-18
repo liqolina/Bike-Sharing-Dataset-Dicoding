@@ -297,8 +297,8 @@ sns.regplot(
     x='hr', 
     y='count', 
     data=second_df, 
-    scatter_kws={'s': 10}, 
-    line_kws={'color': 'red'}
+#    scatter_kws={'s': 10}, 
+#    line_kws={'color': 'red'}
 )
 
 # Membuat plot
