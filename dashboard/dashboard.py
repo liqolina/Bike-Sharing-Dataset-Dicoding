@@ -166,7 +166,7 @@ plt.title("Jumlah total sepeda yang disewakan berdasarkan Cuaca")
 plt.legend(title="Tahun", loc="upper right")  
 
 for container in ax.containers:
-    ax.bar_label(container, fontsize= 8, color= 'white', weight= 'bold', label_type= 'edge')
+    ax.bar_label(container, fontsize= 12, color= 'white', weight= 'bold', label_type= 'edge')
 plt.tight_layout()
 
 st.pyplot(fig)
