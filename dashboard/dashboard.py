@@ -292,7 +292,7 @@ st.subheader("Clustering waktu penyewaan sepeda dengan jumlah penyewaan sepeda")
 fig, ax = plt.subplots()
 
 # Menbuat regression plot untuk menampilkan hubungan season dan jumlah penyewaan sepeda
-plt.figure(figsize=(8, 6))
+plt.figure()
 sns.regplot(
     x='hr', 
     y='count', 
