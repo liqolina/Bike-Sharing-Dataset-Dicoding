@@ -284,6 +284,10 @@ st.pyplot(fig)
 
 # Membuat dashboard Clustering (Manual Grouping)
 st.subheader("Clustering berdasarkan waktu penggunaan, frekuensi penyewaan sepeda, suhu, kelembapan lingkungan, dan kecepatan angin")
+
+# Renaming columns
+grouped_df.rename(columns={'hr': 'Hour', 'temp': 'Temperature*50', 'hum': 'Humidity', 'windspeed': 'Windspeed'}, inplace=True)
+
 st.table(grouped_df)
 
 st.subheader("Clustering waktu penyewaan sepeda dengan jumlah penyewaan sepeda")
